@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le stock | Nouvelle Vis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stock">
+  <div id="site-header"></div>
+  <div class="notif-stock" id="notif-stock"></div>
+
+  <main class="page-stock">
+    <div class="stock-entete">
+      <h1>Le stock</h1>
+      <p class="live"><span class="pulse"></span> Stock en temps réel, mis à jour <span id="maj">à l'instant</span></p>
+    </div>
+
+    <div class="filtres">
+      <div class="chips" id="chips"></div>
+      <input type="search" id="recherche" placeholder="Rechercher un matériau">
+      <select id="tri">
+        <option value="nouveau">Nouveautés d'abord</option>
+        <option value="prix-asc">Prix croissant</option>
+        <option value="prix-desc">Prix décroissant</option>
+        <option value="reduction">Plus grosse réduction</option>
+        <option value="stock">Plus grande quantité</option>
+      </select>
+      <label class="check"><input type="checkbox" id="dispo" checked> Disponibles uniquement</label>
+    </div>
+
+    <p class="resultats" id="nb"></p>
+    <div class="grille" id="grille"></div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

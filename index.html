@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nouvelle Vis | Matériaux de chantier à prix cassés</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="accueil">
+  <div id="site-header"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-texte">
+        <h1>Bâtir<br>sans<br>gaspiller</h1>
+        <p>Nouvelle Vis récupère les surplus et chutes de chantier des grandes entreprises du BTP pour les revendre à prix cassés aux particuliers. Moins de déchets pour eux, des matériaux à petit prix pour vos projets.</p>
+        <a href="stock.html" class="btn-sauge">Voir le stock disponible</a>
+      </div>
+      <div class="hero-visuel">
+        <img class="on" src="img/madriers-chene.png" alt="Madriers de chêne récupérés">
+        <img src="img/tole-ondulee.png" alt="Tôle ondulée galvanisée">
+        <img src="img/briques-rouges.png" alt="Briques rouges">
+        <div class="points"></div>
+      </div>
+    </section>
+
+    <!-- CHIFFRES CLÉS -->
+    <section class="chiffres" id="chiffres" aria-label="Chiffres clés"></section>
+
+    <!-- CATÉGORIES -->
+    <section class="categories">
+      <a href="stock.html?cat=bois" class="categorie">
+        <div class="vignette"><img src="img/planches-pin.png" alt="Bois"></div>Bois
+      </a>
+      <a href="stock.html?cat=metal" class="categorie">
+        <div class="vignette"><img src="img/fers-a-beton.png" alt="Métal"></div>Métal
+      </a>
+      <a href="stock.html?cat=autre" class="categorie">
+        <div class="vignette"><img src="img/tuyaux-pvc.png" alt="Autre"></div>Autre
+      </a>
+    </section>
+
+    <!-- NOUVEL ARRIVAGE -->
+    <section class="section">
+      <div class="titre-ligne">
+        <h2>Nouvel Arrivage</h2>
+        <button class="fleche" id="fleche" aria-label="Voir plus"></button>
+      </div>
+      <div class="rail" id="rail"></div>
+    </section>
+
+    <!-- CONCEPT / ATOUTS -->
+    <section class="atouts" id="concept">
+      <div class="atout"><div class="rond" data-icone="entrepot"></div><p>Retrait à l'entrepôt -<br>Réservez en ligne, récupérez sous 48 h</p></div>
+      <div class="atout"><div class="rond" data-icone="etiquette"></div><p>Prix cassés -<br>Jusqu'à 85 % moins cher que le neuf</p></div>
+      <div class="atout"><div class="rond" data-icone="feuille"></div><p>Matériaux sauvés -<br>Récupérés chez les grands du BTP</p></div>
+      <div class="atout"><div class="rond" data-icone="horloge"></div><p>Stock en temps réel -<br>Ce que vous voyez est disponible</p></div>
+    </section>
+
+    <!-- ENTREPRISES -->
+    <section class="entreprises" id="entreprises">
+      <div class="entreprises-texte">
+        <h2>Une entreprise du BTP&nbsp;?</h2>
+        <p>Surplus de commande, chutes, fins de chantier : plutôt que de payer pour les évacuer, confiez-les-nous. Nous les récupérons, les trions et les revendons à des particuliers.</p>
+        <ul>
+          <li>Enlèvement sur votre chantier</li>
+          <li>Réduction des frais de benne et de gestion des déchets</li>
+          <li>Valorisation de vos surplus dans votre bilan environnemental</li>
+        </ul>
+      </div>
+      <form id="form-entreprise" class="entreprises-form">
+        <input name="societe" required placeholder="Nom de l'entreprise" autocomplete="organization">
+        <input name="courriel" type="email" required placeholder="Courriel professionnel" autocomplete="email">
+        <textarea name="message" rows="3" placeholder="Matériaux à céder (type, quantité, lieu)"></textarea>
+        <button class="btn-cuivre" type="submit">Nous contacter</button>
+      </form>
+    </section>
+
+    <!-- PROMO -->
+    <section class="promo">
+      <h2>Vente jusqu'à 85% de réduction</h2>
+      <p>Rabais sur les articles abîmés</p>
+      <a href="stock.html?tri=reduction" class="btn-blanc">VOIR LES ARTICLES</a>
+    </section>
+
+    <!-- INFOLETTRE -->
+    <section class="infolettre">
+      <div class="infolettre-img"></div>
+      <div class="infolettre-texte">
+        <h2>Soyez informé des arrivages</h2>
+        <p>Recevez un courriel à chaque renouvellement du stock pour réserver les meilleures pièces en premier.</p>
+        <form id="form-infolettre">
+          <input type="email" required placeholder="Adresse courriel">
+          <button class="btn-cuivre" type="submit">S'inscrire</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
