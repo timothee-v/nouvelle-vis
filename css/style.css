@@ -282,13 +282,14 @@ html { scroll-behavior: smooth; }
   .hero-texte { padding: 24px 5% 30px; }
   .hero h1 { font-size: 38px; letter-spacing: -1px; margin-bottom: 18px; }
   .hero-visuel { min-height: 0; height: 210px; }
-  .points { right: 16px; bottom: 10px; }
-  .points button { width: 24px; height: 24px; border: 7px solid transparent; background-clip: padding-box; }
+  .points { right: 16px; bottom: 10px; gap: 0; }
+  .points button, .points button.on { width: 24px; height: 24px; border: 6px solid transparent; background-clip: padding-box; }
 
-  /* Accueil : chiffres clés */
-  .chiffres { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 10px; padding: 18px 4%; }
+  /* Accueil : chiffres clés (le dernier, seul sur sa ligne, reste centré) */
+  .chiffres { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 10px; padding: 18px 4%; text-align: center; }
+  .chiffres > div { flex: 1 1 40%; min-width: 0; }
   .chiffres strong { font-size: 22px; }
-  .chiffres span { font-size: 12px; }
+  .chiffres span { display: block; font-size: 12px; }
 
   /* Accueil : catégories */
   .categories { flex-wrap: nowrap; gap: 10px; padding: 28px 4% 40px; }
