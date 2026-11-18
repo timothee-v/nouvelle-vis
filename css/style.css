@@ -248,3 +248,158 @@ html { scroll-behavior: smooth; }
   .promo .btn-blanc { align-self: center; margin: 60px 0 0; }
   .grille { gap: 20px; }
 }
+
+/* ---------- Correctifs responsive (en-tête, menu) ---------- */
+#site-header { display: contents; }
+.entete { flex-wrap: wrap; row-gap: 10px; }
+.nav { flex-wrap: wrap; }
+.nav a { white-space: nowrap; }
+@media (max-width: 1100px) {
+  .recherche { display: none; }
+}
+
+/* ---------- Téléphone : tailles réduites ---------- */
+@media (max-width: 600px) {
+  /* Formulaires : 16 px pour éviter le zoom automatique sur iPhone */
+  input, select, textarea { font-size: 16px !important; }
+
+  /* En-tête */
+  .bandeau { font-size: 12px; }
+  .entete { position: static; padding: 10px 4%; gap: 6px 10px; }
+  .logo { font-size: 22px; }
+  .nav { gap: 6px 12px; font-size: 13px; }
+  .nav .ico { margin-left: 4px; }
+  .nav .ico svg { width: 22px; height: 22px; }
+
+  /* Boutons */
+  .btn-sauge { padding: 12px 20px; font-size: 15px; }
+  .btn-blanc { padding: 11px 22px; font-size: 15px; }
+  .btn-blanc.gros { font-size: 16px; padding: 13px 16px; letter-spacing: 0; width: 100%; }
+  .btn-cuivre { font-size: 16px; padding: 9px 22px; }
+
+  /* Accueil : hero */
+  .hero { min-height: 0; }
+  .hero-texte { padding: 24px 5% 30px; }
+  .hero h1 { font-size: 38px; letter-spacing: -1px; margin-bottom: 18px; }
+  .hero-visuel { min-height: 0; height: 210px; }
+  .points { right: 16px; bottom: 10px; }
+  .points button { width: 24px; height: 24px; border: 7px solid transparent; background-clip: padding-box; }
+
+  /* Accueil : chiffres clés */
+  .chiffres { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 10px; padding: 18px 4%; }
+  .chiffres strong { font-size: 22px; }
+  .chiffres span { font-size: 12px; }
+
+  /* Accueil : catégories */
+  .categories { flex-wrap: nowrap; gap: 10px; padding: 28px 4% 40px; }
+  .categorie { flex: 1; min-width: 0; font-size: 15px; }
+  .vignette { width: 100%; height: auto; aspect-ratio: 3 / 4; margin-bottom: 8px; }
+
+  /* Accueil : nouvel arrivage */
+  .section { padding: 36px 4% 50px; }
+  .section h2 { font-size: 26px; }
+  .titre-ligne { margin-bottom: 20px; }
+  .fleche svg { width: 20px; height: 34px; }
+  .rail { gap: 14px; }
+  .rail .carte { flex-basis: 165px; }
+
+  /* Cartes produit (accueil + stock) */
+  .carte { padding: 8px 8px 10px; }
+  .carte-img { height: 150px; border-radius: 0 0 10px 10px; }
+  .btn-ajout { left: 6px; right: 6px; transform: none; white-space: normal; font-size: 11px; padding: 6px 4px; line-height: 1.2; }
+  .carte-info { flex-direction: column; gap: 2px; font-size: 14px; margin-top: 8px; }
+  .carte-meta { flex-wrap: wrap; gap: 0 8px; font-size: 12px; }
+
+  /* Accueil : atouts */
+  .atouts { grid-template-columns: repeat(2, 1fr); gap: 22px 14px; padding: 36px 5% 44px; }
+  .rond { width: 68px; height: 68px; margin-bottom: 10px; }
+  .rond svg { width: 34px; height: 34px; }
+  .atout p { font-size: 13px; line-height: 1.4; }
+
+  /* Accueil : entreprises */
+  .entreprises { gap: 26px; padding: 40px 6% 44px; }
+  .entreprises h2 { font-size: 26px; margin-bottom: 12px; }
+  .entreprises p, .entreprises li { font-size: 14px; }
+  .entreprises-form { gap: 10px; }
+  .entreprises-form input, .entreprises-form textarea { padding: 11px 12px; }
+  .entreprises-form .btn-cuivre { font-size: 16px; padding: 9px 22px; }
+
+  /* Accueil : promo */
+  .promo { min-height: 0; padding: 30px 5% 36px; }
+  .promo h2 { font-size: 26px; letter-spacing: -1px; line-height: 1.2; }
+  .promo p { font-size: 17px; margin-top: 4px; }
+  .promo .btn-blanc { align-self: center; margin: 26px 0 0; }
+
+  /* Accueil : infolettre */
+  .infolettre { min-height: 0; }
+  .infolettre-img { display: none; }
+  .infolettre-texte { padding: 34px 5% 40px; }
+  .infolettre h2 { font-size: 26px; margin-bottom: 14px; }
+  .infolettre p { font-size: 14px; margin: 0 0 20px; }
+  .infolettre form { gap: 16px; max-width: none; }
+  .infolettre input, .resa input, .resa select { padding: 11px 12px; }
+  .infolettre .btn-cuivre { align-self: flex-start; margin-left: 0; }
+  .merci { font-size: 16px; }
+
+  /* Pied de page */
+  .pied { padding: 20px 5%; }
+  .pied-liens { justify-content: flex-start; gap: 8px 18px; font-size: 14px; }
+  .pied-milieu { margin: 22px 0; gap: 18px; }
+  .reseaux { gap: 18px; }
+  .reseaux svg { width: 26px; height: 26px; }
+  .legal { gap: 6px 18px; font-size: 13px; }
+  .pied-bas { gap: 8px; font-size: 12px; }
+
+  /* Page stock */
+  .notif-stock { font-size: 13px; padding: 8px 4%; gap: 4px 16px; }
+  .page-stock { padding: 28px 4% 50px; }
+  .stock-entete { margin-bottom: 18px; gap: 8px; }
+  .stock-entete h1 { font-size: 34px; letter-spacing: -1px; }
+  .live { font-size: 12px; }
+  .filtres { gap: 10px; padding: 12px; }
+  .chip { padding: 5px 12px; font-size: 13px; }
+  .filtres input[type=search], .filtres select { padding: 8px 10px; }
+  .filtres input[type=search] { flex-basis: 100%; min-width: 0; }
+  .filtres select { flex: 1; min-width: 0; }
+  .resultats { font-size: 13px; margin-bottom: 14px; }
+  .grille { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .vide { font-size: 15px; padding: 40px 0; }
+
+  /* Page panier */
+  .page-panier { padding: 28px 4% 50px; }
+  .titre-geant { font-size: 34px; letter-spacing: -1px; margin-bottom: 18px; }
+  .ligne { grid-template-columns: 84px 1fr; gap: 12px; padding: 14px 0 20px; margin-bottom: 16px; }
+  .ligne-img { height: 104px; border-radius: 8px; }
+  .ligne-haut { flex-direction: column; margin-top: 0; gap: 2px; }
+  .ligne-haut h2 { font-size: 17px; }
+  .ligne-total { font-size: 16px; }
+  .ligne-pu { font-size: 14px; margin-top: 6px; }
+  .ligne-pu small, .ligne-pu s { font-size: 12px; }
+  .ligne-prov, .ligne-stock { font-size: 12px; }
+  .ligne-actions { padding-top: 10px; gap: 8px 12px; }
+  .qte { width: 116px; height: 38px; padding: 0 6px; }
+  .qte button { font-size: 22px; width: 30px; height: 30px; }
+  .qte span { font-size: 17px; }
+  .poubelle svg { width: 24px; height: 27px; }
+  .panier-vide { font-size: 17px; padding: 30px 0 50px; }
+  .panier-vide p { margin-bottom: 18px; }
+  .total { font-size: 22px; padding: 16px 0 10px; }
+  .economie { font-size: 14px; padding: 8px 0 0; }
+  .resa { gap: 18px; margin-top: 24px; padding: 0; }
+  .resa-info h3 { font-size: 20px; margin-bottom: 6px; }
+  .resa-info p { font-size: 14px; margin-bottom: 6px; }
+  .resa-champs { gap: 10px; }
+  .cgv input { width: 22px; height: 22px; flex: none; }
+
+  /* Modales et toast */
+  .modale { padding: 12px; }
+  .modale-boite { padding: 20px 18px; gap: 10px; }
+  .modale-boite h2 { font-size: 22px; }
+  .modale-boite .num { font-size: 26px; letter-spacing: 1px; }
+  .modale-boite p { font-size: 14px; }
+  .detail { gap: 14px; }
+  .detail-img { min-height: 0; height: 170px; }
+  .detail-prix { font-size: 20px; }
+  .detail-liste li { font-size: 13px; padding: 6px 0; }
+  #toast { font-size: 13px; padding: 10px 16px; bottom: 16px; max-width: 92vw; text-align: center; }
+}
